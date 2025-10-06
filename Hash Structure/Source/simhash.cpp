@@ -1,6 +1,4 @@
-#include "sim_hash.h"
-
-simHash::simHash (std::vector<double>& data, int bit, int weight) : hashFunc (data, bit) {}
+#include "hash.h"
 
 simHash::~simHash () {}
 
@@ -23,7 +21,7 @@ bool simHash::hash () {
     if (data.empty()) return false;
     std::vector<double> W(bit, 0);
     for (size_t i = 0; i < (int) data.size(); ++i) {
-        double weight = std::abs(data[i]); 
+        double weight = std::fabs(data[i]); 
         std::vector<int> phi = simpleHash(data[i]);
 
         for (int j = 0; j < bit; ++j) {
@@ -48,3 +46,4 @@ std::vector<double> simHash::computeWeights(std::vector<double>& u) {
     }
     return weights;
 }
+
