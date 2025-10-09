@@ -1,0 +1,45 @@
+# .gitignore
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+
+
+# Virtual environment
+.venv/
+
+
+# Dataset files - QUAN TRỌNG: không đẩy dataset
+*.jpg
+/game_car_ai/datasets/car_obstacle/labels/train/*.txt
+/game_car_ai/datasets/car_obstacle/labels/val/*.txt
+*.cache
+
+# Model weights - QUAN TRỌNG: không đẩy weights
+*.pt
+
+
+# Training results
+runs/
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Large files
+*.zip
+*.tar.gz
+*.7z
+
+
+clusters
+.pyd
+hash_table_py.egg-info
