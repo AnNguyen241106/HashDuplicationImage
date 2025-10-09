@@ -5,7 +5,8 @@ __pycache__/
 *$py.class
 *.so
 .Python
-build/
+build/*
+!build/.gitkeep
 develop-eggs/
 dist/
 
@@ -40,6 +41,8 @@ logs/
 *.7z
 
 
-clusters
+clusters/*
+!clusters/.gitkeep
+
 .pyd
 hash_table_py.egg-info
